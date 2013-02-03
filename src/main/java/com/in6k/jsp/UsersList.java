@@ -20,12 +20,12 @@ public class UsersList extends HttpServlet{
         List list = getList();
         logger.info(list);
 
-        request.setAttribute("list", list);
+        request.setAttribute("usersList", list);
         request.getRequestDispatcher("list.jsp").include(request, response);
     }
 
     private List getList() throws FileNotFoundException {
-        File dir = new File("/home/employee/test");
+        File dir = new File("/home/alexandr/test");
         File[] files = dir.listFiles(new FilenameFilter() {
             public boolean accept(File dir, String name) {
                 return name.toLowerCase().endsWith(".xml");

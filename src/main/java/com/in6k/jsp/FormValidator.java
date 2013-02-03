@@ -39,7 +39,7 @@ public class FormValidator extends HttpServlet {
         if(errors == "") {
             User user = new User(user_name, second_name, email, password,birthday);
             logger.info(user.getName());
-            writeUserObjectToXmlFile(user, "/home/employee/test/"+user_name+".xml");
+            writeUserObjectToXmlFile(user, "/home/alexandr/test/"+user_name+".xml");
         }
 
         request.setAttribute("errors",errors);
